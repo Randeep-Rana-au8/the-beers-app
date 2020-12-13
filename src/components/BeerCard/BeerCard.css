@@ -1,0 +1,13 @@
+.beerCard {
+  width: 30%;
+  /* height: 400px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardImage {
+  height: 100px;
+  width: auto;
+}

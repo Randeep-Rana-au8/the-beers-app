@@ -1,0 +1,4 @@
+.allBeers {
+  display: flex;
+  flex-wrap: wrap;
+}

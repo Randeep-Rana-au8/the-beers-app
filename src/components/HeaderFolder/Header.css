@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  background-color: #1f1616;
+  color: white;
+  height: 11vh;
+}
+
+.header-div {
+  padding: 0px 50px;
+}
+
+.logo {
+  height: 10vh;
+  margin-top: 0.8vh;
+}
+
+.navItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 20vw;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}

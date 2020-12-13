@@ -1,0 +1,62 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  max-width: 1400px;
+}
+
+.main-container {
+  background-color: black;
+  height: 79vh;
+  width: 100vw;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+}
+
+.container {
+  margin: 0px 10px 0px 100px;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #ee9502;
+  letter-spacing: 1px;
+}
+
+.beerImage {
+  height: 360px;
+}
+
+.main-section {
+  height: auto;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+}
+
+.beerVector {
+  width: 200px;
+  height: 300px;
+}
+
+.exploreButton {
+  width: 200px;
+  height: 50px;
+  font-weight: 600;
+  color: white;
+  background-color: #ee9502;
+  margin-top: 20px;
+  border: none;
+  letter-spacing: 2px;
+  border-radius: 30px;
+}
+
+.link {
+  text-decoration: none;
+}

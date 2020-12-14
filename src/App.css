@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  /* width: 100vw; */
   font-family: "Montserrat", sans-serif;
   max-width: 1400px;
 }
@@ -43,18 +43,6 @@
 .beerVector {
   width: 200px;
   height: 300px;
-}
-
-.exploreButton {
-  width: 200px;
-  height: 50px;
-  font-weight: 600;
-  color: white;
-  background-color: #ee9502;
-  margin-top: 20px;
-  border: none;
-  letter-spacing: 2px;
-  border-radius: 30px;
 }
 
 .link {

@@ -2,3 +2,20 @@
   text-decoration: none;
   color: white;
 }
+
+.exploreButton {
+  width: 200px;
+  height: 50px;
+  font-weight: 600;
+  color: white;
+  background-color: #ee9502;
+  margin-top: 20px;
+  border: none;
+  letter-spacing: 2px;
+  border-radius: 30px;
+}
+
+.exploreButton:hover {
+  background-color: #ffba24;
+  cursor: pointer;
+}

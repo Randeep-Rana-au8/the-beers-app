@@ -3,3 +3,10 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.spinner {
+  color: rgb(58, 51, 51);
+  margin-top: 13%;
+  height: 100px;
+  width: 100px;
+}

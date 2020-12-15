@@ -1,24 +1,25 @@
 .App {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   /* width: 100vw; */
   font-family: "Montserrat", sans-serif;
   max-width: 1400px;
 }
 
-.main-container {
+.mymain-container {
   background-color: black;
-  height: 79vh;
+  height: 89vh;
   width: 100vw;
   color: white;
   display: flex;
   justify-content: center;
-  padding-top: 10vh;
+  align-items: center;
+  /* padding-top: 10vh; */
 }
 
-.container {
+.my-container {
   margin: 0px 10px 0px 100px;
 }
 

@@ -30,3 +30,8 @@
   text-decoration: none;
   color: white;
 }
+
+.cartItem {
+  display: flex;
+  align-items: center;
+}

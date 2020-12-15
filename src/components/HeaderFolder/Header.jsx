@@ -3,8 +3,10 @@ import "./Header.css";
 import svg from "../../allSVGs/main.svg";
 import { Link } from "react-router-dom";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import { connect } from "react-redux";
 
-const Header = () => {
+const Header = ({ length }) => {
+  console.log(length);
   return (
     <div className="header">
       <div className="header header-div">
@@ -24,8 +26,9 @@ const Header = () => {
             <div>User</div>
           </Link>
           <Link className="link" to="/cart">
-            <div>
+            <div className="cartItem">
               <ShoppingBasketIcon />
+              <span style={{ "margin-left": "2px" }}>{length}</span>
             </div>
           </Link>
         </div>
@@ -34,4 +37,12 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  console.log(state);
+  console.log(state.basket.length);
+  return {
+    length: state.basket.length,
+  };
+};
+
+export default connect(mapStateToProps)(Header);

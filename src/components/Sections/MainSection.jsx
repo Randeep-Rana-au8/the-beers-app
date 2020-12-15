@@ -5,8 +5,8 @@ import "./MainSection.css";
 
 const MainSection = () => {
   return (
-    <div className="main-container">
-      <div className="container">
+    <div className="mymain-container">
+      <div className="my-container">
         <h1 className="title">
           Hi,
           <br />
@@ -19,7 +19,7 @@ const MainSection = () => {
           <button className="exploreButton">EXPLORE </button>
         </Link>
       </div>
-      <div className="container">
+      <div className="my-container">
         <img className="beerImage" src={beerImage} />
       </div>
     </div>

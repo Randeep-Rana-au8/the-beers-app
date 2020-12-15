@@ -22,7 +22,7 @@
   width: auto;
 }
 
-.button {
+.mybutton {
   width: 100%;
   margin: 1px 0px;
   color: white;
@@ -37,4 +37,12 @@
   cursor: pointer;
   background-color: rgb(117, 53, 0);
   color: white;
+}
+
+h2 {
+  margin: 10px 0px 0px 0px;
+}
+
+p {
+  margin: 10px 0px 10px 0px;
 }

@@ -1,7 +1,10 @@
 import React from "react";
 import "./BeerCard.css";
+import { connect } from "react-redux";
+import { getProductDetails } from "../../actions/actions";
+import { Link } from "react-router-dom";
 
-const BeerCard = ({ data }) => {
+const BeerCard = ({ data, getProductDetails }) => {
   if (data.name.length > 16) {
     data.name = data.name.slice(0, 15);
   }
@@ -9,19 +12,29 @@ const BeerCard = ({ data }) => {
     data.tagline = data.tagline.slice(0, 32);
   }
 
+  const getDetails = () => {
+    console.log("i am clicked");
+    getProductDetails(data);
+  };
+
   return (
     <div className="beerCard" key={data.id}>
       <div className="productDetails">
         <img className="cardImage" src={data.image_url} />
         <h2>{data.name}</h2>
         <p>{data.tagline}</p>
+        <p>${data.target_og}</p>
       </div>
       <div className="productButtonDiv">
-        <button className="button detailsButton">More Details</button>
-        <button className="button">Add to Card</button>
+        <Link to="/product-details">
+          <button onClick={getDetails} className="mybutton detailsButton">
+            More Details
+          </button>
+        </Link>
+        <button className="mybutton">Add to Card</button>
       </div>
     </div>
   );
 };
 
-export default BeerCard;
+export default connect(null, { getProductDetails })(BeerCard);

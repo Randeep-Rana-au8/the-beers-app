@@ -14,7 +14,7 @@ const BeerCard = ({ data, getProductDetails }) => {
 
   const getDetails = () => {
     console.log("i am clicked");
-    getProductDetails(data);
+    getProductDetails(data.id);
   };
 
   return (

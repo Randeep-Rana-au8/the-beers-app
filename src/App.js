@@ -4,6 +4,7 @@ import AllBeers from "./components/AllBeers";
 import Header from "./components/HeaderFolder/Header";
 import MainSection from "./components/Sections/MainSection";
 import DetailsPage from "./pages/product-details/DetailsPage";
+import NewDetails from "./pages/product-details/NewDetails";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <AllBeers />
       </Route>
       <Route path="/product-details">
-        <DetailsPage />
+        <NewDetails />
       </Route>
     </div>
   );

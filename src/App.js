@@ -3,7 +3,7 @@ import "./App.css";
 import AllBeers from "./components/AllBeers";
 import Header from "./components/HeaderFolder/Header";
 import MainSection from "./components/Sections/MainSection";
-import DetailsPage from "./pages/product-details/DetailsPage";
+
 import NewDetails from "./pages/product-details/NewDetails";
 
 function App() {

@@ -4,15 +4,22 @@ import { connect } from "react-redux";
 import { add_details } from "../../actions/actions";
 import { Spinner } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import "./AllBeers.css";
+import "./NewDetails.css";
 
-const NewDetails = ({ id, add_data, add_details, productDetails }) => {
-  localStorage.setItem("id", id);
+const NewDetails = ({ id, add_details, productDetails }) => {
+  var newId;
+  if (id == null) {
+    newId = Number(localStorage.getItem("id"));
+  } else {
+    localStorage.setItem("id", id);
+    newId = id;
+  }
+
   const newData = async () =>
     await axios.get("https://api.punkapi.com/v2/beers").then((res) => {
       console.log("i am working in the detals page", res.data);
       console.log(id);
-      const newId = localStorage.getItem("id");
+
       console.log(newId);
       const product = res.data.filter((data) => data.id === newId);
       add_details(product);
@@ -20,30 +27,33 @@ const NewDetails = ({ id, add_data, add_details, productDetails }) => {
     });
 
   useEffect(() => {
-    newData();
+    setTimeout(() => newData(), 1000);
   }, []);
 
   return (
-    <div className="details-page">
-      <div className="left-content">
-        <h2>{productDetails.name}</h2>
-        <p>{productDetails.description}</p>
-      </div>
-      <div className="right-content">
-        <h2>Ingredients</h2>
-        <div className="ingredients-list">
-          {productDetails.length ? (
-            productDetails[0].ingredients.hops.map((data) => (
-              <div key={data.id}>
-                <h4>{data.name}</h4>
-                <p>{`value: ${data.amount.value} ${data.amount.unit}`}</p>
-              </div>
-            ))
-          ) : (
-            <Spinner className="spinner" animation="border" />
-          )}
+    <div className="details-container">
+      {productDetails.length ? (
+        <div className="details-page">
+          <div className="left-content">
+            <img className="product-image" src={productDetails[0].image_url} />
+            <h2>{productDetails[0].name}</h2>
+            <p>{productDetails[0].description}</p>
+          </div>
+          <div className="right-content">
+            <h2>Ingredients</h2>
+            <div className="ingredients-list">
+              {productDetails[0].ingredients.hops.map((data) => (
+                <div key={data.id}>
+                  <h4>{data.name}</h4>
+                  <p>{`value: ${data.amount.value} ${data.amount.unit}`}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      ) : (
+        <Spinner className="spinner" animation="border" />
+      )}
     </div>
   );
 };

@@ -32,17 +32,17 @@ const NewDetails = ({ id, add_details, productDetails }) => {
 
   return (
     <div className="details-container">
-      {productDetails.length ? (
+      {productDetails ? (
         <div className="details-page">
           <div className="left-content">
-            <img className="product-image" src={productDetails[0].image_url} />
-            <h2>{productDetails[0].name}</h2>
-            <p>{productDetails[0].description}</p>
+            <img className="product-image" src={productDetails.image_url} />
+            <h2 className="title">{productDetails.name}</h2>
+            <p className="description">{productDetails.description}</p>
           </div>
           <div className="right-content">
-            <h2>Ingredients</h2>
+            <h2 className="ingredients-name">Ingredients</h2>
             <div className="ingredients-list">
-              {productDetails[0].ingredients.hops.map((data) => (
+              {productDetails.ingredients.hops.map((data) => (
                 <div key={data.id}>
                   <h4>{data.name}</h4>
                   <p>{`value: ${data.amount.value} ${data.amount.unit}`}</p>
@@ -60,7 +60,7 @@ const NewDetails = ({ id, add_details, productDetails }) => {
 
 const mapStateToProps = (state) => {
   return {
-    productDetails: state.productDetails,
+    productDetails: state.productDetails[0],
     id: state.productId,
   };
 };

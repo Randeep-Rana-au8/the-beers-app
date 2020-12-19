@@ -20,7 +20,7 @@ const AllBeers = ({ datas, add_data }) => {
 
   return (
     <div className="allBeers">
-      {datas.length != 0 ? (
+      {datas.length !== 0 ? (
         datas.map((data) => <BeerCard key="data.id" data={data} />)
       ) : (
         <Spinner className="spinner" animation="border" />

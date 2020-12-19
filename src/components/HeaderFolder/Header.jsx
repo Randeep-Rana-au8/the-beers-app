@@ -39,9 +39,9 @@ const Header = ({ length }) => {
 
 const mapStateToProps = (state) => {
   console.log(state);
-  console.log(state.basket.length);
+  console.log(state.cart.length);
   return {
-    length: state.basket.length,
+    length: state.cart.length,
   };
 };
 

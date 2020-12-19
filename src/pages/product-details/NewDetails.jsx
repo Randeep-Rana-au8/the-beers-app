@@ -1,34 +1,27 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
-import { add_details } from "../../actions/actions";
+import { addToCart, add_details } from "../../actions/actions";
 import { Spinner } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./NewDetails.css";
 
-const NewDetails = ({ id, add_details, productDetails }) => {
-  var newId;
-  if (id == null) {
-    newId = Number(localStorage.getItem("id"));
-  } else {
-    localStorage.setItem("id", id);
-    newId = id;
-  }
+const NewDetails = ({ id, add_details, addToCart, productDetails }) => {
+  var newId = Number(localStorage.getItem("id")) || id;
 
   const newData = async () =>
     await axios.get("https://api.punkapi.com/v2/beers").then((res) => {
-      console.log("i am working in the detals page", res.data);
-      console.log(id);
-
-      console.log(newId);
       const product = res.data.filter((data) => data.id === newId);
       add_details(product);
-      console.log(product);
     });
 
   useEffect(() => {
-    setTimeout(() => newData(), 1000);
+    setTimeout(() => newData(), 500);
   }, []);
+
+  const handleClick = () => {
+    addToCart(newId);
+  };
 
   return (
     <div className="details-container">
@@ -38,6 +31,9 @@ const NewDetails = ({ id, add_details, productDetails }) => {
             <img className="product-image" src={productDetails.image_url} />
             <h2 className="title">{productDetails.name}</h2>
             <p className="description">{productDetails.description}</p>
+            <button className="add-product-button" onClick={handleClick}>
+              Add to Cart
+            </button>
           </div>
           <div className="right-content">
             <h2 className="ingredients-name">Ingredients</h2>
@@ -65,4 +61,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { add_details })(NewDetails);
+export default connect(mapStateToProps, { add_details, addToCart })(NewDetails);

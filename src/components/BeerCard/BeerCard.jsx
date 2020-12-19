@@ -13,14 +13,14 @@ const BeerCard = ({ data, getProductDetails }) => {
   }
 
   const getDetails = () => {
-    console.log("i am clicked");
+    console.log(data.id);
     getProductDetails(data.id);
   };
 
   return (
     <div className="beerCard" key={data.id}>
       <div className="productDetails">
-        <img className="cardImage" src={data.image_url} />
+        <img className="cardImage" alt="beerImage" src={data.image_url} />
         <h2>{data.name}</h2>
         <p>{data.tagline}</p>
         <p>${data.target_og}</p>

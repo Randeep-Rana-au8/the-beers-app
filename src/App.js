@@ -3,6 +3,7 @@ import "./App.css";
 import AllBeers from "./components/AllBeers";
 import Header from "./components/HeaderFolder/Header";
 import MainSection from "./components/Sections/MainSection";
+import Cartpage from "./pages/cart/Cartpage";
 
 import NewDetails from "./pages/product-details/NewDetails";
 
@@ -18,6 +19,9 @@ function App() {
       </Route>
       <Route path="/product-details">
         <NewDetails />
+      </Route>
+      <Route path="/cart">
+        <Cartpage />
       </Route>
     </div>
   );

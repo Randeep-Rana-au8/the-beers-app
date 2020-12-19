@@ -1,7 +1,6 @@
 .details-container {
   display: flex;
   justify-content: center;
-  height: 89vh;
 }
 
 .left-content {
@@ -55,4 +54,14 @@
   margin-top: 13%;
   height: 100px;
   width: 100px;
+}
+
+.add-product-button {
+  width: 160px;
+  height: 37px;
+  background-color: rgb(255, 174, 0);
+  color: white;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
 }

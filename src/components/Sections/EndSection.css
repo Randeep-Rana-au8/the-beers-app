@@ -18,3 +18,19 @@
   background-image: url("../../image-collections/pexels-kelly-lacy-2796105-min.jpg");
   background-size: cover;
 }
+
+.contact-details {
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  background: red;
+  top: calc(200vh + 70vh);
+}
+
+.contact-data {
+  background: #ffffffdb;
+  height: 30vh;
+  width: 50%;
+  border-radius: 20px;
+}

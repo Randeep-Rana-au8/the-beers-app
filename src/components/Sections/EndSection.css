@@ -1,0 +1,20 @@
+.contact-ellipse {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 2000px;
+  height: 800px;
+  left: -29%;
+  padding: 84px;
+  top: -560px;
+  border-radius: 50%;
+  color: rgb(0, 0, 0);
+  background: #ffffff;
+}
+
+.contact-section {
+  background-image: url("../../image-collections/pexels-kelly-lacy-2796105-min.jpg");
+  background-size: cover;
+}

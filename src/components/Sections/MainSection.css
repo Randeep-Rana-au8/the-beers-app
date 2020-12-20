@@ -3,6 +3,44 @@
   color: white;
 }
 
+.mymain-container {
+  background-color: black;
+  height: 100vh;
+
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 10vh; */
+}
+
+.my-container {
+  margin: 10px 10px 0px 100px;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #ee9502;
+  letter-spacing: 1px;
+}
+
+.beerImage {
+  height: 360px;
+}
+
+.main-section {
+  height: auto;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+}
+
+.beerVector {
+  width: 200px;
+  height: 300px;
+}
+
 .exploreButton {
   width: 200px;
   height: 50px;

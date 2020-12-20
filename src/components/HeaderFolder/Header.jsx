@@ -22,8 +22,8 @@ const Header = ({ length }) => {
           <Link className="link" to="/shop">
             <div>Shop</div>
           </Link>
-          <Link className="link" to="/user">
-            <div>User</div>
+          <Link className="link" to="contact-us">
+            <div>ContactUs</div>
           </Link>
           <Link className="link" to="/cart">
             <div className="cartItem">

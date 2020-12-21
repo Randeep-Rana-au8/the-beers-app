@@ -24,7 +24,7 @@
   width: 100%;
   justify-content: center;
   display: flex;
-  background: red;
+
   top: calc(200vh + 70vh);
 }
 
@@ -33,4 +33,27 @@
   height: 30vh;
   width: 50%;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.insta-icon {
+  color: #ff0d37;
+  margin: 0px 5px;
+}
+
+.fb-icon {
+  margin: 0px 5px;
+  color: #005aff;
+}
+
+.github-icon {
+  margin: 0px 5px;
+  color: black;
+}
+
+.icons {
+  margin-bottom: 10px;
 }

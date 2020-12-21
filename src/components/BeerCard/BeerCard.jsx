@@ -1,10 +1,10 @@
 import React from "react";
 import "./BeerCard.css";
 import { connect } from "react-redux";
-import { getProductDetails } from "../../actions/actions";
+import { getProductDetails, addToCart } from "../../actions/actions";
 import { Link } from "react-router-dom";
 
-const BeerCard = ({ data, getProductDetails }) => {
+const BeerCard = ({ data, getProductDetails, addToCart }) => {
   if (data.name.length > 16) {
     data.name = data.name.slice(0, 15);
   }
@@ -15,6 +15,10 @@ const BeerCard = ({ data, getProductDetails }) => {
   const getDetails = () => {
     console.log(data.id);
     getProductDetails(data.id);
+  };
+
+  const addCart = () => {
+    addToCart(data.id);
   };
 
   return (
@@ -31,10 +35,12 @@ const BeerCard = ({ data, getProductDetails }) => {
             More Details
           </button>
         </Link>
-        <button className="mybutton">Add to Card</button>
+        <button onClick={addCart} className="mybutton">
+          Add to Card
+        </button>
       </div>
     </div>
   );
 };
 
-export default connect(null, { getProductDetails })(BeerCard);
+export default connect(null, { getProductDetails, addToCart })(BeerCard);
